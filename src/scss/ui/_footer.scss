@@ -1,0 +1,107 @@
+@use "../base/mixins" as m;
+@use "../base/variables" as v;
+
+.footer {
+  background-color: v.$grisClarito;
+  &__up {
+    padding: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include m.tablet {
+      align-items: flex-end;
+    }
+    &-input {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include m.tablet {
+        flex-direction: row;
+        align-items: flex-end;
+      }
+    }
+
+    p {
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 25px;
+      @include m.tablet {
+        margin-right: 192px;
+        margin-bottom: 10px;
+      }
+    }
+    input {
+      height: 40px;
+      width: 300px;
+      border: 1px solid v.$grisInput;
+      border-radius: 0;
+      padding: 15px;
+      @include m.tablet {
+        width: 300px;
+      }
+    }
+    button {
+      border-radius: 0;
+      height: 40px;
+      margin-top: 10px;
+      width: 300px;
+      @include m.tablet {
+        width: 150px;
+      }
+    }
+  }
+
+  &__line {
+    display: none;
+    @include m.tablet {
+      display: block;
+      border-bottom: 1px solid #dddd;
+    }
+  }
+  &__iconos {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 15px;
+    padding: 30px 55px 0 55px;
+    align-items: center;
+    @include m.tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &-pagos {
+      display: flex;
+      justify-content: space-evenly;
+
+      @include m.tablet {
+        justify-content: flex-start;
+      }
+      li {
+        @include m.tablet {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+  &__derechos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    span {
+      margin-left: 10px;
+      color: v.$negro;
+    }
+  }
+}
+.redes {
+  font-size: 30px !important;
+  margin: 0;
+  @include m.tablet {
+    margin-right: 15px;
+  }
+}
+.pagos {
+  @include m.tablet {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

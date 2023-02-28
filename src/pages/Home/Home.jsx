@@ -37,10 +37,10 @@ const Home = () => {
       <div>
         <ImageBar />
       </div>
-      <button
+      {/* <button
         onClick={() => getProducts()}
       > click
-      </button>
+      </button> */}
     </div>
   )
 }
