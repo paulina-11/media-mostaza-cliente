@@ -1,0 +1,48 @@
+@use "../base/mixins" as m;
+@use "../base/variables" as v;
+.heroCenter {
+  &__image {
+    background-image: linear-gradient(
+        rgba(36, 36, 36, 0.31),
+        rgba(32, 31, 31, 0.401)
+      ),
+      url("https://images.pexels.com/photos/7240263/pexels-photo-7240263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    @include m.tablet {
+      height: 100vh;
+    }
+  }
+  &__text {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -50%);
+    color: v.$blanco;
+        @include m.tablet{
+             transform: translate(-50%, -50%);
+        }
+    h2{
+        font-size: 2.8rem;
+        font-weight: 900;
+        span{
+          color: v.$mostaza;
+        }
+        @include m.tablet{
+            font-size: 5.5rem;
+            margin-bottom: 20px;
+        }
+    }
+    p{
+        font-size: 1.5rem;
+        text-align: center;
+        @include m.tablet{
+            font-size: 2.5rem;
+        }
+    }
+  }
+}

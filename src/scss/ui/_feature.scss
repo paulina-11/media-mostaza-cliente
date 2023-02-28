@@ -1,0 +1,38 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+.feature {
+  margin-top: 55px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(1fr 1fr);
+  @include m.tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+  &__image {
+    
+    img {
+      @include m.tablet {
+        max-width: 600px;
+      }
+    }
+
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+      font-size: 25px;
+      font-weight: 900;
+      margin-bottom: 15px;
+      text-align: center;
+      @include m.tablet {
+        font-size: 35px;
+      }
+    }
+    p {
+      text-align: justify;
+    }
+  }
+}

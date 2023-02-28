@@ -1,0 +1,62 @@
+@use "../base/mixins" as m;
+@use "../base/variables" as v;
+
+.imageBar{
+display: grid;
+    grid-template-columns: repeat(1fr);
+    @include m.tablet{
+        grid-template-columns: repeat(3,1fr);
+    }
+     &__image {
+    background-image: linear-gradient(
+        rgba(36, 36, 36, 0.31),
+        rgba(32, 31, 31, 0.401)
+      ),
+      url("https://images.pexels.com/photos/5257614/pexels-photo-5257614.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+       height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    @include m.tablet {
+      height: 80vh;
+    }
+  }
+   &__text {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -50%);
+    color: v.$blanco;
+        @include m.tablet{
+             transform: translate(-50%, -50%);
+        }
+    h3{
+        font-size: 2.8rem;
+        font-weight: 900;
+        span{
+          color: v.$mostaza;
+        }
+        @include m.tablet{
+            font-size: 5.5rem;
+            margin-bottom: 20px;
+        }
+    }
+  }
+}
+
+.imageTwo{
+    background-image: linear-gradient(
+        rgba(36, 36, 36, 0.31),
+        rgba(32, 31, 31, 0.401)
+      ),
+      url("https://images.pexels.com/photos/7504833/pexels-photo-7504833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.imageThree{
+    background-image: linear-gradient(
+        rgba(36, 36, 36, 0.31),
+        rgba(32, 31, 31, 0.401)
+      ),
+      url("https://images.pexels.com/photos/7484482/pexels-photo-7484482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}

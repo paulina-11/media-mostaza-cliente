@@ -1,0 +1,27 @@
+@use '../base/variables' as v;
+.presentation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-one {
+  grid-column-start: 1;
+  img{
+    border: 1px solid rgba(57, 54, 54, 0.463);
+  }
+}
+.grid-two {
+  grid-column-start: 1;
+  position: absolute;
+  width: 50%;
+  margin-top: 236px;
+  color: #fff;
+  padding: 20px;
+}
+.grid-two:hover{
+    background-color: #fff;
+    color: v.$negro;
+    border-bottom: 1px solid rgba(57, 54, 54, 0.463);
+    border-right: 1px solid rgba(57, 54, 54, 0.463);
+    border-left: 1px solid rgba(57, 54, 54, 0.463);
+}

@@ -1,0 +1,47 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.inputBuscar {
+  min-height: 44px;
+  padding: 8px 15px;
+  min-width: 750px;
+  border: 1px solid v.$grisInput;
+}
+.buscador {
+  max-width: 750px;
+  display: flex;
+  align-items: center;
+}
+.lupa {
+  position: relative;
+  right: 40px;
+  font-size: 10px;
+}
+button {
+  background-color: transparent;
+}
+.bi {
+  font-size: 20px !important;
+  font-weight: bolder !important;
+  cursor: pointer;
+  margin: 10px;
+}
+.bi::before {
+  font-weight: bolder !important;
+}
+.modal-content {
+  height: 146px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border: none !important;
+  border-radius: 0;
+}
+.modal-dialog {
+  max-width: 100%;
+  margin: 0;
+}
+
+.modal-backdrop {
+  position: relative;
+}
