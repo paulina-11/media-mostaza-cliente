@@ -3,6 +3,9 @@
 
 .faq {
   margin: 140px 35px;
+  @include m.tablet{
+    margin-top: 55px;
+  }
   &__titulos {
     h2 {
       font-size: 5rem;
