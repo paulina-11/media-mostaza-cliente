@@ -2,21 +2,6 @@ import { createContext, useContext, useEffect, useState } from 'react'
 import { useLazyQuery } from '@apollo/client'
 import { GET_PRODUCTS } from '../graphql/Queries'
 
-// const ProductsContext = () => {
-//     const [totalProducts, setTotalProducts] = useState('')
-
-//     const { loading, error, data } = useQuery(GET_PRODUCTS, {
-//         variables: { name: totalProducts }
-//     })
-//     if (loading) return null
-//     if (error) return `Error! ${error}`
-
-//   return (
-
-//   )
-// }
-
-// export default ProductsContext
 const ProductContext = createContext()
 
 function ProductProvider (props) {
@@ -25,6 +10,7 @@ function ProductProvider (props) {
   const [getProducts, { loading, error, data }] = useLazyQuery(GET_PRODUCTS, {
     variables: { name: totalProducts }
   })
+
   if (error) return <h3>Not Found</h3>
   if (data) {
     console.log(data)

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import masterCard from '../../assets/image/mastercard.svg'
 import amex from '../../assets/image/amex.svg'
@@ -6,15 +6,21 @@ import paypal from '../../assets/image/paypal.svg'
 import visa from '../../assets/image/visa.svg'
 
 const Footer = () => {
+  const [getEmail, setgetEmail] = useState(false)
+
+  const handleClick = () => {
+    setgetEmail(true)
+  }
   return (
     <section className='footer'>
       <div className='footer__up'>
         <div>
           <p>Suscríbete a nuestro newsletters</p>
+          {getEmail ? <p className='suscrito'>¡Gracias por suscribirte!</p> : null}
         </div>
         <div className='footer__up-input'>
           <input type='text' placeholder='Direccion de correo electrónico' />
-          <button className='boton__general'>Suscribirse</button>
+          <button className='boton__general' onClick={handleClick}> Suscribirse</button>
         </div>
       </div>
       <hr className='footer__line' />

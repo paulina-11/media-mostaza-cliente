@@ -7,9 +7,9 @@ const MyRoutes = () => {
   return (
     <Routes>
       <Route exact path='/' element={<Home />} />
-      <Route exact path='/products' element={<Products />} />
-      <Route exact path='/:productId' element={<ProductDetails />} />
-      <Route exact path='/faq' element={<Faq />} />
+      <Route path='/products' element={<Products />} />
+      <Route path='/products/:_id' element={<ProductDetails />} />
+      <Route path='/faq' element={<Faq />} />
     </Routes>
   )
 }
