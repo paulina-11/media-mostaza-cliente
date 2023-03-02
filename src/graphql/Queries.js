@@ -4,7 +4,8 @@ export const GET_PRODUCTS = gql`
   query getProducts {
     getProducts {
       _id
-      title
+      product
+      category
       price
       brand
       description

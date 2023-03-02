@@ -34,8 +34,8 @@ const Footer = () => {
           </li>
         </ul>
         <div className='footer__iconos-pagos pagos'>
-          <i class='bi bi-facebook redes' />
-          <i class='bi bi-instagram redes' />
+          <i className='bi bi-facebook redes' />
+          <i className='bi bi-instagram redes' />
         </div>
       </div>
       <div className='footer__derechos'>

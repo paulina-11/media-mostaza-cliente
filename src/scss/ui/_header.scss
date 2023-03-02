@@ -1,5 +1,5 @@
-@use '../base/variables' as v;
-@use '../base/mixins' as m;
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
 header {
   position: fixed;
   top: 0;
@@ -13,6 +13,9 @@ header {
 }
 .block {
   display: block;
+}
+.bi{
+  color: v.$negro;
 }
 .bg-body-tertiary {
   background-color: transparent !important;
@@ -73,4 +76,21 @@ header.abajo ul li a {
 }
 header.abajo .logo {
   color: v.$mostaza;
+}
+
+.bg-body-tertiary {
+  background-color: v.$blanco !important ;
+  @include m.tablet {
+    background-color: transparent !important;
+  }
+}
+i.bi.bi-bag {
+  font-size: 22px !important;
+}
+.buscador__nav {
+  display: flex;
+  align-items: center;
+  @include m.tablet {
+    margin-left: 220px;
+  }
 }

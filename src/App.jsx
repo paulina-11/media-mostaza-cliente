@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import { ProductProvider } from './context/ProductsContext'
 
 function App () {
   const client = new ApolloClient({
@@ -12,9 +13,11 @@ function App () {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Header />
-        <MyRoutes />
-        <Footer />
+        <ProductProvider>
+          <Header />
+          <MyRoutes />
+          <Footer />
+        </ProductProvider>
       </Router>
     </ApolloProvider>
 

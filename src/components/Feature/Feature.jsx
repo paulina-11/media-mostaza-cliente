@@ -13,7 +13,7 @@ const Feature = () => {
           ¿No sales de lo mismo? No te preocupes, te ayudamos a llevar tu clóset al siguiente nivel.
         </p>
         <p>¿Qué historia vas a querer contar hoy?</p>
-        <Link to='products/all' style={{ textDecoration: 'none' }}> <button className='boton__general'>Comprar ahora</button></Link>
+        <Link to='products' style={{ textDecoration: 'none' }}> <button className='boton__general'>Comprar ahora</button></Link>
       </div>
     </div>
   )

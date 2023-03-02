@@ -21,27 +21,23 @@ const Header = () => {
                 <Link className='nav-link active' aria-current='page' to='/'>Inicio</Link>
               </li>
               <li className='nav-item dropdown'>
-                <a className='nav-link dropdown-toggle' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
+                <Link to='products' className='nav-link ' href='#' role='button'>
                   The sweatshirts
-                </a>
-                <ul className='dropdown-menu'>
-                  <li><Link className='dropdown-item' to='products/basicas'>Básicas </Link></li>
-                  <li><Link className='dropdown-item' to='products/capucha'>Con capucha</Link></li>
-                  <li><Link className='dropdown-item' to='products/cremallera'>Con cremallera</Link></li>
-                  <li><Link className='dropdown-item' to='products/all'>Todos los productos</Link></li>
-                </ul>
+                </Link>
               </li>
               <li className='nav-item'>
                 <Link className='nav-link' to='faq'>FAQ</Link>
               </li>
+              <div className='buscador__nav'>
+                <li>
+                  <Search />
+                </li>
+                <li>
+                  <i className='bi bi-bag' />
+                </li>
+              </div>
             </ul>
           </nav>
-          <div>
-            <Search />
-          </div>
-          <div>
-            <i className='bi bi-bag' />
-          </div>
         </div>
       </header>
 

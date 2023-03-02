@@ -47,7 +47,7 @@ const Collection = () => {
         {/* fin gallery */}
       </div>
       <div className='collection__botones'>
-        <Link to='products/all' style={{ textDecoration: 'none' }}> <button className='boton__general'>Ver todo</button></Link>
+        <Link to='products' style={{ textDecoration: 'none' }}> <button className='boton__general'>Ver todo</button></Link>
       </div>
 
     </section>
